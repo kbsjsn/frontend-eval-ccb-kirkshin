@@ -40,19 +40,6 @@ const SearchBar = ({ searchMovies, showAllMovies }) => {
         className="search-button"
         onClick={handleShowAll}
       >Show All</button>
-      <div className="select-movie-list">
-        <div className="select-movie-list-label">
-          Select Movies List
-        </div>
-        <div className="select-movie-list-options">
-          <input type="radio" id="now-playing" value="now-playing" name="select-movie-list" defaultChecked></input>
-          <label htmlFor="now-playing">Now Playing</label>
-          <input type="radio" id="popular" value="popular" name="select-movie-list"></input>
-          <label htmlFor="popular">Popular</label>
-          <input type="radio" id="top-rated" value="top-rated" name="select-movie-list"></input>
-          <label htmlFor="top-rated">Top Rated</label>
-        </div>
-      </div>
     </div>
   )
 }

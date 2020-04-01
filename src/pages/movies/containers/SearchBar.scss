@@ -27,20 +27,3 @@
   background-color: $blue2;
   color: $white;
 }
-
-.select-movie-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 2em;
-}
-
-.select-movie-list-label {
-  text-align: center;
-  font-size: 1.25em;
-  margin-bottom: 0.25em;
-}
-
-.select-movie-list-options label {
-  margin: 0 0.5em;
-}

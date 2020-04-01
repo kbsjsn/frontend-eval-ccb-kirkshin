@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { 
   fetchNowPlaying,
-  fetchPopular,
-  fetchTopRated,
   fetchMoreMovies
 } from '../modules/actions';
 import MoviesTableHeader from './MoviesTableHeader';
@@ -25,7 +23,8 @@ function mapStateToProps(state) {
     moviesPopular,
     moviesTopRated,
     currentMovieList,
-    isLoadingMovies
+    isLoadingMovies,
+    isLoadingMoreMovies
   }
 }
 
@@ -33,12 +32,6 @@ function mapDispatchToProps(dispatch) {
   return {
     fetchNowPlaying () {
       dispatch(fetchNowPlaying())
-    },
-    fetchPopular () {
-      dispatch(fetchPopular())
-    },
-    fetchTopRated () {
-      dispatch(fetchTopRated())
     },
     fetchMoreMovies () {
       dispatch(fetchMoreMovies())
@@ -51,8 +44,6 @@ const Movies = ({
   isLoadingMovies,
   isLoadingMoreMovies,
   fetchNowPlaying,
-  fetchPopular,
-  fetchTopRated,
   fetchMoreMovies
 }) => {
   React.useEffect(() => {

@@ -2,8 +2,6 @@ import {
   FETCH_MOVIES_STARTED, 
   FETCH_MOVIES_FAILED,
   FETCH_NOW_PLAYING_SUCCEEDED,
-  FETCH_POPULAR_SUCCEEDED,
-  FETCH_TOP_RATED_SUCCEEDED,
   FETCH_MORE_MOVIES_STARTED,
   FETCH_MORE_MOVIES_SUCCEEDED,
   SORT_BY,
@@ -32,14 +30,6 @@ function fetchNowPlayingSucceeded(movieData) {
   return { type: FETCH_NOW_PLAYING_SUCCEEDED, movieData }
 }
 
-function fetchPopularSucceeded(movieData) {
-  return { type: FETCH_POPULAR_SUCCEEDED, movieData }
-}
-
-function fetchTopRatedSucceeded(movieData) {
-  return { type: FETCH_TOP_RATED_SUCCEEDED, movieData }
-}
-
 function fetchMoreMoviesStarted () {
   return { type: FETCH_MORE_MOVIES_STARTED }
 }
@@ -62,26 +52,6 @@ export function fetchNowPlaying () {
 
     return fetchMovies(`https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
       .then(data => dispatch(fetchNowPlayingSucceeded(data.results)))
-      .catch(err => dispatch(fetchMoviesFailed(err)))
-  }
-}
-
-export function fetchPopular () {
-  return function (dispatch) {
-    dispatch(fetchMoviesStarted());
-
-    return fetchMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
-      .then(data => dispatch(fetchPopularSucceeded(data.results)))
-      .catch(err => dispatch(fetchMoviesFailed(err)))
-  }
-}
-
-export function fetchTopRated () {
-  return function (dispatch) {
-    dispatch(fetchMoviesStarted());
-
-    return fetchMovies(`https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
-      .then(data => dispatch(fetchTopRatedSucceeded(data.results)))
       .catch(err => dispatch(fetchMoviesFailed(err)))
   }
 }

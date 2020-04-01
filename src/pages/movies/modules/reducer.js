@@ -2,15 +2,12 @@ import {
   FETCH_MOVIES_STARTED,
   FETCH_MOVIES_FAILED,
   FETCH_NOW_PLAYING_SUCCEEDED,
-  FETCH_POPULAR_SUCCEEDED,
-  FETCH_TOP_RATED_SUCCEEDED,
   SORT_BY,
   TOGGLE_SORT_ORDER,
   SEARCH_MOVIES,
   SHOW_ALL_MOVIES,
   FETCH_MORE_MOVIES_STARTED,
   FETCH_MORE_MOVIES_SUCCEEDED,
-  // SELECT_MOVIE,
   CLOSE_DETAIL_PANE,
   FETCH_MOVIE_DETAIL_STARTED,
   FETCH_MOVIE_DETAIL_SUCCEEDED
@@ -86,20 +83,6 @@ export default function reducer (state = initialState, action) {
         moviesNowPlaying: action.movieData,
         currentMovieList: action.movieData,
         // currentMovieList: 'now-playing',
-        isLoadingMovies: false
-      }
-    case FETCH_POPULAR_SUCCEEDED:
-      return {
-        ...state,
-        moviesPopular: action.movieData,
-        currentMovieList: 'popular',
-        isLoadingMovies: false
-      }
-    case FETCH_TOP_RATED_SUCCEEDED:
-      return {
-        ...state,
-        moviesTopRated: sortMovies(action.movieData, state.sortField, sortOrder),
-        currentMovieList: 'top-rated',
         isLoadingMovies: false
       }
     case FETCH_MOVIES_FAILED:
