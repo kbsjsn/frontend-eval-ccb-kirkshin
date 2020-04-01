@@ -31,10 +31,12 @@ export const HeaderCell = ({content, src, sortField, sortOrder, sortBy, toggleSo
   return (
     sortBy ? 
       // header of movie table
-        <div className="cell-header" onClick={handleClick}>
-          <div className="cell-table-heading">
+        <div className="cell-header table-heading" onClick={handleClick}>
+          <div className="table-heading-container">
             <SmallHeader text={content} />
-            {sortIcon}
+            {
+              sortIcon && <span className="sort-icon">{sortIcon}</span>
+            }
           </div>
         </div>
     :

@@ -33,7 +33,7 @@ const SearchBar = ({ searchMovies, showAllMovies }) => {
       <input 
         className="search-input"
         onChange={handleInput} 
-        placeholder="Search Movie"
+        placeholder="Search Listed Movies"
       />
       <button className="search-button" onClick={handleSearch}>Search</button>
       <button 
@@ -41,13 +41,17 @@ const SearchBar = ({ searchMovies, showAllMovies }) => {
         onClick={handleShowAll}
       >Show All</button>
       <div className="select-movie-list">
-        Show Movies...
-        <label htmlFor="now-playing">Now Playing</label>
-        <input type="radio" id="now-playing" value="now-playing" name="select-movie-list" defaultChecked></input>
-        <label htmlFor="popular">Popular</label>
-        <input type="radio" id="popular" value="popular" name="select-movie-list"></input>
-        <label htmlFor="top-rated">Top Rated</label>
-        <input type="radio" id="top-rated" value="top-rated" name="select-movie-list"></input>
+        <div className="select-movie-list-label">
+          Select Movies List
+        </div>
+        <div className="select-movie-list-options">
+          <input type="radio" id="now-playing" value="now-playing" name="select-movie-list" defaultChecked></input>
+          <label htmlFor="now-playing">Now Playing</label>
+          <input type="radio" id="popular" value="popular" name="select-movie-list"></input>
+          <label htmlFor="popular">Popular</label>
+          <input type="radio" id="top-rated" value="top-rated" name="select-movie-list"></input>
+          <label htmlFor="top-rated">Top Rated</label>
+        </div>
       </div>
     </div>
   )

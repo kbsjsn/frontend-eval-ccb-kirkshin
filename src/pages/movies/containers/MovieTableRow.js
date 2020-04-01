@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { DataCell } from '../../../components/molecules/DataCell';
+import { DataCellBarChart } from '../../../components/molecules/DataCellBarChart';
 import { HeaderCell } from '../../../components/molecules/HeaderCell';
 import { TableRow } from '../../../components/organisms/TableRow';
 import { fetchMovieDetail } from '../modules/actions';
@@ -31,7 +32,7 @@ const MovieTableRowContainer = ({ movie, fetchMovieDetail }) => {
       <HeaderCell content={title} />
       <DataCell content={new Date(release_date).toString().split(' ').slice(1, 4).join(' ')} />
       <DataCell content={popularity} />
-      <DataCell content={vote_average} />
+      <DataCellBarChart content={vote_average} />
     </TableRow>
   )
 }

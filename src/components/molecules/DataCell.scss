@@ -5,4 +5,14 @@
   text-align: center;
   padding: 0.5em;
   border-bottom: 1px solid $gray3;
+  height: 100%;
+}
+
+.container-chart {
+  width: 80%
+}
+
+.chart {
+  height: 0.8em;
+  background-color: $blue2;
 }

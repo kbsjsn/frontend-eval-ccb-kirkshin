@@ -6,6 +6,7 @@ import { Overview } from '../../../components/atoms/Overview';
 import { Icon } from '../../../components/atoms/Icon';
 import { closeDetailPane } from '../modules/actions';
 import isolang from '../../../assets/isolang.json';
+import './MovieDetailPane.scss';
 
 function mapStateToProps (state) {
   const { movieDetail, isLoadingMovieDetail } = state
@@ -77,13 +78,13 @@ const MovieDetailPaneContainer = ({ movieDetail, isLoadingMovieDetail, closeDeta
         <SmallHeader text={title} />
         <small>{homepage && <a href={homepage}>Official site</a>}</small>
         <Overview text={overview} />
-        <figure>
+        <figure className="detail-icon">
           <Icon src={`https://image.tmdb.org/t/p/w500/${poster_path}`} title={title} />
           <figcaption><i>{tagline}</i></figcaption>
         </figure>
-        <ul>
+        <ul className="detail-list">
           <li>
-            <SmallHeader text="Genre" />:&nbsp;
+            <SmallHeader text="Genre:" />&nbsp;
             {
               addCommas(genres, 'name')
             }
@@ -91,7 +92,7 @@ const MovieDetailPaneContainer = ({ movieDetail, isLoadingMovieDetail, closeDeta
           {
             runtime ?
               <li>
-                <SmallHeader text="Runtime" />:&nbsp;
+                <SmallHeader text="Runtime:" />&nbsp;
                 {
                   convertToHrsMins(runtime)
                 }
@@ -100,25 +101,25 @@ const MovieDetailPaneContainer = ({ movieDetail, isLoadingMovieDetail, closeDeta
               null
           }
           <li>
-            <SmallHeader text="Release date" />:&nbsp;
+            <SmallHeader text="Release date:" />&nbsp;
             {
               new Date(release_date).toString().split(' ').slice(1, 4).join(' ')
             }
           </li>
           <li>
-            <SmallHeader text="Status" />: {status}
+            <SmallHeader text="Status:" />&nbsp;{status}
           </li>
           <li>
-            <SmallHeader text="Language" />: {language}
+            <SmallHeader text="Language:" />&nbsp;{language}
           </li>
           <li>
-            <SmallHeader text="Budget" />: {convertToDollarNotation(budget)}
+            <SmallHeader text="Budget:" />&nbsp;{convertToDollarNotation(budget)}
           </li>
           <li>
-            <SmallHeader text="Revenue" />: {convertToDollarNotation(revenue)}
+            <SmallHeader text="Revenue:" />&nbsp;{convertToDollarNotation(revenue)}
           </li>
           <li>
-            <SmallHeader text="Production Companies" />:&nbsp;
+            <SmallHeader text="Production Companies:" />&nbsp;
             {
               addCommas(production_companies, 'name')
             }

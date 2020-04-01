@@ -9,8 +9,13 @@ html, body {
 
 body {
  font-family: 'Helvetica Neue', Arial, sans-serif;
+ background-color: $blue3;
 }
 
 button {
   cursor: pointer;
+}
+
+a {
+  color: $orange;
 }

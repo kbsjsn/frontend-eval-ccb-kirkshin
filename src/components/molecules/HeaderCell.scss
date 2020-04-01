@@ -3,10 +3,28 @@
 .cell-header {
   display: table-cell;
   padding: 0.5em;
-  border-bottom: 1px solid $gray3
+  border-bottom: 1px solid $gray3;
+  color: $gray1;
 }
 
-.cell-table-heading {
+.table-heading-container {
   display: flex;
   justify-content: space-between;
+  min-width: 10em;
+}
+.table-heading {
+  border-top: 1px $gray3 solid;
+  border-right: 1px $gray3 solid;
+}
+
+.table-heading:nth-last-of-type(1) {
+  border-right: none;
+}
+
+.table-heading:hover {
+  cursor: pointer;
+}
+
+.sort-icon {
+  color: $gray3;
 }

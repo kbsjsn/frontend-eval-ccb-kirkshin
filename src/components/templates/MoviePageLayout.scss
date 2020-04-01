@@ -1,3 +1,11 @@
+@import '../../assets/stylesheets/colors';
+
+footer {
+  padding: 1em;
+  background-color: $blue1;
+  color: $white;
+}
+
 .default-layout {
   display: grid;
   height: 100vh;
