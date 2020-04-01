@@ -1,0 +1,25 @@
+.container-movie-table {
+  grid-area: movie-table;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-table {
+  display: table;
+  border-collapse: collapse;
+  position: relative;
+}
+
+.movie-table-header {
+  display: table-row;
+  font-size: 1.2em;
+  position: sticky;
+}
+
+.button-show-more-movies {
+  width: 10em;
+  font-size: 1.5em;
+  margin-top: 1em;
+}

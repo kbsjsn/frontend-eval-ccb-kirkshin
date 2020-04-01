@@ -1,0 +1,17 @@
+.search {
+  grid-area: searchbar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.search-input {
+  width: 20em;
+  height: 1.75em;
+  margin: 0 0.25em;
+}
+
+.search-button {
+  margin: 0 0.25em;
+}

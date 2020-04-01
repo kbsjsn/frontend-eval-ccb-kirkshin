@@ -1,0 +1,17 @@
+@import '../../assets/stylesheets/colors';
+
+.detail-pane {
+  background-color: $light-blue;
+  grid-area: detail-pane;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.button-close-pane {
+  position: relative;
+  width: 2em;
+  left: 95%;
+  bottom: 2%;
+}

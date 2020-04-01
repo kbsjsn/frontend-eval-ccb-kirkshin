@@ -1,0 +1,19 @@
+.default-layout {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: auto;
+  grid-template-rows: 10% auto;
+  grid-template-areas: 
+    "searchbar"
+    "movie-table";
+}
+
+.expanded-layout {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 30% auto;
+  grid-template-rows: 10% auto;
+  grid-template-areas: 
+    "searchbar searchbar"
+    "detail-pane movie-table";
+}
