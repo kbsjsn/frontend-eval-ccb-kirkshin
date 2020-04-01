@@ -6,15 +6,16 @@ import MovieDetailPane from './containers/MovieDetailPane';
 import { MoviePageLayout } from '../../components/templates/MoviePageLayout';
 
 function mapStateToProps (state) {
-  const { selectedMovie } = state;
+  const { movieDetail, isLoadingMovieDetail } = state;
   return {
-    selectedMovie
+    movieDetail,
+    isLoadingMovieDetail
   }
 }
 
-const MoviesPageContainer = ({ selectedMovie }) => {
+const MoviesPageContainer = ({ movieDetail, isLoadingMovieDetail }) => {
   return (
-    <MoviePageLayout style={selectedMovie ? 'expanded-layout' : 'default-layout' } >
+    <MoviePageLayout style={movieDetail || isLoadingMovieDetail ? 'expanded-layout' : 'default-layout' } >
       <MovieDetailPane />
       <SearchBar />
       <MoviesTable />

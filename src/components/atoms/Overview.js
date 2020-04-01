@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Overiew = ({text}) => (
+export const Overview = ({text}) => (
   <div>
     <p>{text}</p>
   </div>

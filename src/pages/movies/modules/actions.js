@@ -10,7 +10,6 @@ import {
   TOGGLE_SORT_ORDER,
   SEARCH_MOVIES,
   SHOW_ALL_MOVIES,
-  SELECT_MOVIE,
   CLOSE_DETAIL_PANE,
   FETCH_MOVIE_DETAIL_STARTED,
   FETCH_MOVIE_DETAIL_SUCCEEDED
@@ -102,7 +101,9 @@ export function fetchMovieDetail (movieId) {
   return function (dispatch) {
     dispatch(fetchMovieDetailsStarted());
 
-    return fetchMovies(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
+    fetchMovies(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
+      .then(data => dispatch(fetchMovieDetailsSucceeded(data)))
+      .catch(err => dispatch(fetchMoviesFailed(err)))
   }
 }
 
@@ -114,9 +115,9 @@ export function toggleSortOrder () {
   return { type: TOGGLE_SORT_ORDER }
 }
 
-export function selectMovie(selectedMovie) {
-  return { type: SELECT_MOVIE, selectedMovie }
-}
+// export function selectMovie(selectedMovie) {
+//   return { type: SELECT_MOVIE, selectedMovie }
+// }
 
 export function closeDetailPane() {
   return { type: CLOSE_DETAIL_PANE }

@@ -10,8 +10,10 @@ import {
   SHOW_ALL_MOVIES,
   FETCH_MORE_MOVIES_STARTED,
   FETCH_MORE_MOVIES_SUCCEEDED,
-  SELECT_MOVIE,
-  CLOSE_DETAIL_PANE
+  // SELECT_MOVIE,
+  CLOSE_DETAIL_PANE,
+  FETCH_MOVIE_DETAIL_STARTED,
+  FETCH_MOVIE_DETAIL_SUCCEEDED
 } from './constants';
 
 function sortMovies (moviesData, sortField, sortOrder) {
@@ -20,8 +22,8 @@ function sortMovies (moviesData, sortField, sortOrder) {
     let aVal = a[sortField];
     let bVal = b[sortField];
     if (sortField === 'release_date') {
-      aVal = new Date(...aVal.split('-'))
-      bVal = new Date(...bVal.split('-'))
+      aVal = new Date(aVal)
+      bVal = new Date(bVal)
       if (sortOrder) return aVal.valueOf() - bVal.valueOf()
       return bVal.valueOf() - aVal.valueOf()
     }
@@ -65,7 +67,8 @@ const initialState = {
   isLoadingMovies: false,
   isLoadingMoreMovies: false,
   tmdbPageNum: 1,
-  selectedMovie: null
+  movieDetail: null,
+  isLoadingMovieDetail: false,
 }
 
 export default function reducer (state = initialState, action) {
@@ -106,6 +109,17 @@ export default function reducer (state = initialState, action) {
         movies: action.err,
         currentMovieList: null,
         isLoadingMovies: false
+      }
+    case FETCH_MOVIE_DETAIL_STARTED: 
+      return {
+        ...state,
+        isLoadingMovieDetail: true
+      }
+    case FETCH_MOVIE_DETAIL_SUCCEEDED:
+      return {
+        ...state,
+        isLoadingMovieDetail: false,
+        movieDetail: action.movieDetail
       }
     case SORT_BY:
       sortOrder = true;
@@ -154,15 +168,15 @@ export default function reducer (state = initialState, action) {
         currentMovieList: updatedData,
         isLoadingMoreMovies: false
       }
-    case SELECT_MOVIE:
-      return {
-        ...state,
-        selectedMovie: action.selectedMovie
-      }
+    // case SELECT_MOVIE:
+    //   return {
+    //     ...state,
+    //     movieDetail: action.selectedMovie
+    //   }
     case CLOSE_DETAIL_PANE:
       return {
         ...state,
-        selectedMovie: null
+        movieDetail: null
       }
     default: 
       return {
