@@ -1,5 +1,16 @@
 # Front-End Developer Test -- Kirk Shin
 
+# Setup
+
+```bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm start
+
+```
+
 ## App Design Pattern
 - I approached building the app with Atomic Design (reusing components and building additional components with the existing ones). There are a lot of files given the current size of the app (and the tradeoff is that the performance slightly less optimized), but if it were to scale up, the existing structure should help in organizing and maintaining the codebase. 
 
