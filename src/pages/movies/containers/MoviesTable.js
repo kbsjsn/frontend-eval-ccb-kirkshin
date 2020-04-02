@@ -48,6 +48,7 @@ const Movies = ({
 }) => {
   React.useEffect(() => {
     fetchNowPlaying()
+  // eslint-disable-next-line
   }, []);
 
   // each movie obj, need to make a row 

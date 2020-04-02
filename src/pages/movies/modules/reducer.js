@@ -54,7 +54,7 @@ function sortMovies (moviesData, sortField, sortOrder) {
   })
 }
 
-const initialState = {
+export const initialState = {
   moviesNowPlaying: [],
   moviesPopular: [],
   moviesTopRated: [],
@@ -68,7 +68,7 @@ const initialState = {
   isLoadingMovieDetail: false,
 }
 
-export default function reducer (state = initialState, action) {
+export function reducer (state = initialState, action) {
   let { sortOrder } = state;
 
   switch (action.type) {

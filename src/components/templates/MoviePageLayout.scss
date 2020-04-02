@@ -1,5 +1,9 @@
 @import '../../assets/stylesheets/colors';
 
+header {
+  padding: 1em;
+}
+
 footer {
   padding: 1em;
   background-color: $blue1;
@@ -10,7 +14,7 @@ footer {
   display: grid;
   height: 100vh;
   grid-template-columns: auto;
-  grid-template-rows: 10% auto;
+  grid-template-rows: 5% auto;
   grid-template-areas: 
     "searchbar"
     "movie-table";
@@ -20,7 +24,7 @@ footer {
   display: grid;
   height: 100vh;
   grid-template-columns: 30% auto;
-  grid-template-rows: 10% auto;
+  grid-template-rows: 5% auto;
   grid-template-areas: 
     "searchbar searchbar"
     "detail-pane movie-table";

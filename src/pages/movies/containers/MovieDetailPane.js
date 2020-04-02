@@ -75,7 +75,7 @@ const MovieDetailPaneContainer = ({ movieDetail, isLoadingMovieDetail, closeDeta
 
     return (
       <DetailPane isSelected={!!movieDetail} closePane={closeDetailPane} >
-        <SmallHeader text={title} />
+        <h3 className="detail-title">{title}</h3>
         <small>{homepage && <a href={homepage}>Official site</a>}</small>
         <Overview text={overview} />
         <figure className="detail-icon">

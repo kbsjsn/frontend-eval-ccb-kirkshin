@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1em;
+  margin-bottom: 1.5em;
 }
 
 .search-input {
@@ -24,6 +24,6 @@
   padding: 0 1em;
   font-size: 1em;
   height: 1.75em;
-  background-color: $blue2;
+  background-color: $green;
   color: $white;
 }
