@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-  fetchPopular,
-  fetchTopRated,
   searchMovies,
   showAllMovies
 } from '../modules/actions'
