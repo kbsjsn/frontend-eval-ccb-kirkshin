@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/frontend-eval-ccb-kirkshin/precache-manifest.5702f779c3b2c07dfe0d1456a2b31500.js"
+  "/frontend-eval-ccb-kirkshin/precache-manifest.97c382ea7e567b9f83b52eda94bd5730.js"
 );
 
 self.addEventListener('message', (event) => {

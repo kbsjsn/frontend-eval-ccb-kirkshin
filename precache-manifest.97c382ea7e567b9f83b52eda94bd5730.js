@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "04f9a8bc8e3328c7fa4d1cb4cea2ff38",
+    "revision": "e91d733ea98fa41b3e58045b34ef76e1",
     "url": "/frontend-eval-ccb-kirkshin/index.html"
   },
   {
-    "revision": "e843129ff0b07ac8909c",
+    "revision": "50fd9477afd4058b21cc",
     "url": "/frontend-eval-ccb-kirkshin/static/css/main.d1cd7fcd.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend-eval-ccb-kirkshin/static/js/2.9b1e6010.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e843129ff0b07ac8909c",
-    "url": "/frontend-eval-ccb-kirkshin/static/js/main.e92e62e0.chunk.js"
+    "revision": "50fd9477afd4058b21cc",
+    "url": "/frontend-eval-ccb-kirkshin/static/js/main.f7aee5a9.chunk.js"
   },
   {
     "revision": "3d12e4389548f0692972",

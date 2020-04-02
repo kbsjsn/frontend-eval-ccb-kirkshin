@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/frontend-eval-ccb-kirkshin/static/css/main.d1cd7fcd.chunk.css",
-    "main.js": "/frontend-eval-ccb-kirkshin/static/js/main.e92e62e0.chunk.js",
-    "main.js.map": "/frontend-eval-ccb-kirkshin/static/js/main.e92e62e0.chunk.js.map",
+    "main.js": "/frontend-eval-ccb-kirkshin/static/js/main.f7aee5a9.chunk.js",
+    "main.js.map": "/frontend-eval-ccb-kirkshin/static/js/main.f7aee5a9.chunk.js.map",
     "runtime-main.js": "/frontend-eval-ccb-kirkshin/static/js/runtime-main.34d6343b.js",
     "runtime-main.js.map": "/frontend-eval-ccb-kirkshin/static/js/runtime-main.34d6343b.js.map",
     "static/js/2.9b1e6010.chunk.js": "/frontend-eval-ccb-kirkshin/static/js/2.9b1e6010.chunk.js",
     "static/js/2.9b1e6010.chunk.js.map": "/frontend-eval-ccb-kirkshin/static/js/2.9b1e6010.chunk.js.map",
     "index.html": "/frontend-eval-ccb-kirkshin/index.html",
-    "precache-manifest.5702f779c3b2c07dfe0d1456a2b31500.js": "/frontend-eval-ccb-kirkshin/precache-manifest.5702f779c3b2c07dfe0d1456a2b31500.js",
+    "precache-manifest.97c382ea7e567b9f83b52eda94bd5730.js": "/frontend-eval-ccb-kirkshin/precache-manifest.97c382ea7e567b9f83b52eda94bd5730.js",
     "service-worker.js": "/frontend-eval-ccb-kirkshin/service-worker.js",
     "static/css/main.d1cd7fcd.chunk.css.map": "/frontend-eval-ccb-kirkshin/static/css/main.d1cd7fcd.chunk.css.map",
     "static/js/2.9b1e6010.chunk.js.LICENSE.txt": "/frontend-eval-ccb-kirkshin/static/js/2.9b1e6010.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.34d6343b.js",
     "static/js/2.9b1e6010.chunk.js",
     "static/css/main.d1cd7fcd.chunk.css",
-    "static/js/main.e92e62e0.chunk.js"
+    "static/js/main.f7aee5a9.chunk.js"
   ]
 }
