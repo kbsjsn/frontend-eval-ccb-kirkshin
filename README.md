@@ -1,6 +1,6 @@
 # Front-End Developer Test -- Kirk Shin
 
-# Setup
+## Setup
 
 ```bash
 # install dependencies
